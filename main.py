@@ -119,8 +119,9 @@ def send_to_slack_diff_list(diff_list):
 def data_update():
     repo = git.Repo()
     repo.git.commit('.', '-m', '\"Update Data\"')
-    origin = repo.remote()
-    origin.push('main')
+
+    origin = repo.remote(name='origin')
+    origin.push()
 
 
 print('scraping white cross')
