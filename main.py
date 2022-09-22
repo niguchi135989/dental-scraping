@@ -120,7 +120,7 @@ def data_update():
     repo = git.Repo()
     repo.git.commit('.', '-m', '\"Update Data\"')
     origin = repo.remote(name='master')
-    origin.push('master')
+    origin.push('main')
 
 
 print('scraping white cross')
